@@ -23,3 +23,10 @@ EXAMPLES
 ## Installation
 
 Place `red.sh` somewhere accessible in your `$PATH`.
+
+Example:
+
+```bash
+git clone https://github.com/timhwang21/red.git
+ln -s $( pwd )/red/red.sh /usr/local/bin/red
+```
