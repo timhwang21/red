@@ -27,12 +27,13 @@ red() {
   local input=$3
   local output=$4
 
+  local editor=${EDITOR:-vi} # TODO make this an option
   local tmp="/tmp/red_${start},${end}_$$"
   local tmp_out="/tmp/red_out_$$"
 
   # slice large file and pass to vim
   sed -n ${start},${end}p $input > $tmp
-  vim $tmp
+  editor $tmp
 
   # splice edited file into old file
   {
