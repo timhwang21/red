@@ -33,7 +33,7 @@ red() {
 
   # slice large file and pass to vim
   sed -n ${start},${end}p $input > $tmp
-  editor $tmp
+  $editor $tmp
 
   # splice edited file into old file
   {
